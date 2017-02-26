@@ -235,7 +235,7 @@ $(function () {
             formatter: function () {
                 var str = `
                 <span>
-                    <strong>Propensity of Sickness Index: ${this.point.value}</strong>
+                    <strong>Wellness Index: ${this.point.value}</strong>
                     <br/>                 
                     Ageing Index: ${this.point.PropensitytoGetSick.AgeingIndex}
                     <br/>
@@ -252,7 +252,7 @@ $(function () {
         },
 
         title: {
-            text: 'Sickness Prospensity Index'
+            text: 'Wellness Index'
         },
     });
 
@@ -335,13 +335,25 @@ $(document).ready(function () {
     }
     $("#lookupForm").submit(function () {
         $('.lookupResult').removeClass('hidden');
-        $("#result").text(generateInteger100());
-        $("#income").text(generateInteger100());
-        $("#practioner").text(generateInteger100());
-        $("#referrals").text(generateInteger100());
-        $("#ageing").text(generateInteger100());
-        $("#insurance").text(generateInteger100());
-        $("#distance").text(generateInteger100());
+
+        [inc, pract, refer, age, ins, dist] = [
+            generateInteger100(),
+            generateInteger100(),
+            generateInteger100(),
+            generateInteger100(),
+            generateInteger100(),
+            generateInteger100()
+        ]
+
+        $("#income").text(inc);
+        $("#practioner").text(pract);
+        $("#referrals").text(refer);
+        $("#ageing").text(age);
+        $("#insurance").text(ins);
+        $("#distance").text(dist);
+        var avg = (inc + pract + refer + age) / 4 + (ins + dist) / 2
+        avg /= 2 
+        $("#result").text(avg);
         return false;
     });
 });
