@@ -150,9 +150,6 @@ $(function () {
     var data3 = generateData([42.5, 69.5, 60.5, 28, 42.5, 45, 30.5, 39, 52.5, 67.5]);
 
     var mapBase = {
-        title: {
-            text: 'Health Index of Australia'
-        },
 
         subtitle: {
             text: 'Source map: <a href="./au-all.js">Australia</a>'
@@ -163,10 +160,6 @@ $(function () {
             buttonOptions: {
                 verticalAlign: 'bottom'
             }
-        },
-
-        colorAxis: {
-            min: 0
         },
 
         chart: {
@@ -180,10 +173,10 @@ $(function () {
             data: data1,
             mapData: Highcharts.maps['countries/au/au-all'],
             joinBy: 'hc-key',
-            name: 'Index data',
+            name: 'Practitioner data',
             states: {
                 hover: {
-                    color: '#FFFFFF'
+                    color: '#DF242D'
                 }
             },
             dataLabels: {
@@ -208,7 +201,17 @@ $(function () {
                 </span>`;
                 return str;
             }
-        }
+        },
+
+        colorAxis: {
+            min: 0,
+            minColor: '#ffc9a2',
+            maxColor: '#ff5b0a'
+        },
+
+        title: {
+            text: 'Access Health Service Index'
+        },
     });
 
     var map2 = Object.assign({}, mapBase, {
@@ -216,10 +219,10 @@ $(function () {
             data: data2,
             mapData: Highcharts.maps['countries/au/au-all'],
             joinBy: 'hc-key',
-            name: 'Index data',
+            name: 'Prospensity data',
             states: {
                 hover: {
-                    color: '#000000'
+                    color: '#DF242D'
                 }
             },
             dataLabels: {
@@ -240,7 +243,17 @@ $(function () {
                 </span>`;
                 return str;
             }
-        }
+        },
+
+        colorAxis: {
+            min: 0,
+            minColor: '#e4ffce',
+            maxColor: '#347202'
+        },
+
+        title: {
+            text: 'Sickness Prospensity Index'
+        },
     });
 
     var map3 = Object.assign({}, mapBase, {
@@ -265,7 +278,17 @@ $(function () {
                 var str = `Health Index: ${this.point.value}`;
                 return str;
             }
-        }
+        },
+
+        colorAxis: {
+            min: 0,
+            minColor: '#fcd6ff',
+            maxColor: '#e91ba1'
+        },
+
+        title: {
+            text: 'Health Index of Australia'
+        },
     });
 
     // Initiate the chart
