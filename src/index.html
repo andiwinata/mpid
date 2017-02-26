@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logoContainer">
+            <h1 class="logo">HPI</h1>
+        </div>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Select index:</h2>
+            <select name="indexSelect" id="indexSelect">
+                <option value="practitionerIndex">Practitioner Index</option>
+                <option value="propensityIndex">Propensity Index</option>
+                <option value="healthIndex">Health Index</option>
+            </select>
+            <div class="1"></div>
+            <div class="2"></div>
+            <div class="3"></div>
+        </aside>
+        <main class="main">
+            <div id="container1" class="1 chart"></div>
+            <div id="container2" class="2 chart"></div>
+            <div id="container3" class="3 chart"></div>
+            <div>
+                <h3>Lookup for postcode data:</h3>
+            </div>
+            <div class="lookup">
+                <form id="lookupForm">
+                    Input Postcode:<br>
+                    <input type="number">
+                    <input class="lookupSubmit" type="submit" value="Retrieve Index">
+                </form>
+                <div class="lookupResult hidden">
+                    <h5>Access Health Service</h5>
+                    <ul>
+                        <li>Income Index: <span id="income"></span></li>
+                        <li>Practioner Coverage Index: <span id="practioner"></span></li>
+                        <li>Distance to Practioner Index: <span id="distance"></span></li>
+                        <li>Insurance Coverage Index: <span id="insurance"></span></li>
+                    </ul>
+
+                    <h5>Propensity to get sick</h5>
+                    <ul>
+                        <li>Ageing Index: <span id="ageing"></span></li>
+                        <li>ReferralsIndex: <span id="referrals"></span></li>
+                    </ul>
+                    <h5>Health Performer Indicator:</h5>
+                    <ul>
+                        <li>Index: <span id="result"></span></li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+        crossorigin="anonymous"></script>
+        <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+        <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+        <script src="./au-all.js"></script>
+        <script src="./index.js"></script>
+</body>
+
+</html>

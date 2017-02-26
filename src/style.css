@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    background: #eee;
+    font-family: 'Source Sans Pro', 'Tahoma', sans-serif;
+}
+.main div {
+    margin: 0 auto;
+    width: 70%;
+}
+.main .chart {
+    height: 400px; 
+    width: 700px;
+    min-width: 310px; 
+    max-width: 800px; 
+}
+.main {
+    width: 80%;
+    padding-top: 20px;
+}
+.sidebar {
+    width: 20%;
+    background: #444;
+    padding: 0 20px;
+    height: 100%;
+    color: #FFF;
+}
+.loading {
+    margin-top: 10em;
+    text-align: center;
+    color: gray;
+}
+.hidden {
+    display: none;
+}
+.container {
+    display: flex;
+}
+select, input, button {
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    height: 2.5rem;
+    width: 100%;
+    display: block;
+    margin: 5px 0;
+    padding: 0 10px;
+    border-radius: 1px;
+}
+li {
+    list-style: none;
+}
+.header {
+    background: #111;
+    color: #DF242D;
+}
+.logoContainer {
+    padding: 10px 5vw;
+}
+.logo, h5 {
+    margin: 0;
+}
+h5 {
+    border-bottom: 3px solid #DF242D;
+}
+.lookupSubmit {
+    color: #fff;
+    background: #DF242D;
+}
+.lookup span {
+    color: #DF242D;
+    font-size: larger;
+}
